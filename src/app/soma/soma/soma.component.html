@@ -1,0 +1,25 @@
+
+<form>
+  <p>
+    <mat-form-field>
+      <mat-label>Número 1</mat-label>
+      <input matInput #numero1 placeholder="digite o 1ºnúmero da soma">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>1ºnúmero da soma</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label>Número 2</mat-label>
+      <input matInput #numero2 placeholder="digite o 2ºnúmero da soma">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>2ºnúmero da soma</mat-hint>
+    </mat-form-field>
+  </p>
+
+  <button mat-raised-button type="button" color="primary" (click)="somar(numero1.value, numero2.value)">Somar</button>
+  <p><input matInput [value]="resultado" readonly></p>
+</form>
+<!-- o #numero1,#numero2 e o resultado são ligações(bidns)-->
+<!-- [value]= significa que vai alterar o valor para algo-->
+<!-- O (click)="somar(numero1.value, numero2.value)" significa que ao clicar, o botão chamará o método somar que vai trazer os campos de numero1 e numero2  -->
